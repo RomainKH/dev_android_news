@@ -5,6 +5,13 @@
                                                    android:layout_width="match_parent"
                                                    android:layout_height="wrap_content">
 
+    <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" tools:srcCompat="@tools:sample/avatars"
+            android:id="@+id/NewsImageView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
     <TextView
             android:text="title"
             android:layout_width="0dp"

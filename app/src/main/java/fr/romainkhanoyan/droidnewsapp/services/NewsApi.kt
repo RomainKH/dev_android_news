@@ -2,11 +2,12 @@ package fr.romainkhanoyan.droidnewsapp.services
 
 import retrofit2.Call
 import retrofit2.http.GET
+import retrofit2.http.Query
 
 interface NewsApi {
 
-    @GET("top-headlines?country=us&apiKey=6e2f93df9e8c4b4b8fd9a4041fb33f67")
-    fun getHeadlines(): Call<NewsWrapper>
+    @GET("top-headlines?apiKey=6e2f93df9e8c4b4b8fd9a4041fb33f67")
+    fun getHeadlines(@Query("country") country: String): Call<NewsWrapper>
 
 }
 

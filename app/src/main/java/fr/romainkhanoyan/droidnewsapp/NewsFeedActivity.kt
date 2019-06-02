@@ -22,6 +22,7 @@ class NewsFeedActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_news_feed)
+        var query = "us"
 
         recyclerView.layoutManager = LinearLayoutManager(
             this,
@@ -30,13 +31,24 @@ class NewsFeedActivity : AppCompatActivity() {
         )
 
         val itemAdapter = ItemAdapter<IItem<*, *>>()
+
+        createContent(query)
+
+        changingNewsButton.setOnClickListener{
+            query = "fr"
+            createContent(query)
+        }
+    }
+
+    fun createContent(query: String)
+    {
+        val itemAdapter = ItemAdapter<IItem<*, *>>()
+        val repository = NewsRepository()
         val fastAdapter = FastAdapter.with<NewsItem, ItemAdapter<IItem<*, *>>>(itemAdapter)
 
-        recyclerView.adapter = fastAdapter
+        itemAdapter.clear()
 
-        val repository = NewsRepository()
-
-        repository.api.getHeadlines()
+        repository.api.getHeadlines(query)
             .enqueue(object : Callback<NewsWrapper> {
 
                 override fun onFailure(call: Call<NewsWrapper>, t: Throwable) {
@@ -59,5 +71,7 @@ class NewsFeedActivity : AppCompatActivity() {
                 }
 
             })
+
+        recyclerView.adapter = fastAdapter
     }
 }

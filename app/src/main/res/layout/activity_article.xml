@@ -7,42 +7,61 @@
         android:layout_height="match_parent"
         tools:context=".ArticleActivity">
 
-    <TextView
-            android:text="Article"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/contentTextView" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="15dp"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="15dp"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintTop_toBottomOf="@+id/dateTextView" android:layout_marginTop="10dp"/>
-    <TextView
-            android:text="TitleArticle"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/titleTextView" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="15dp"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="15dp"
-            app:layout_constraintHorizontal_bias="0.498" android:layout_marginTop="10dp"
-            app:layout_constraintTop_toBottomOf="@+id/articleImageView" android:textSize="18sp"
-            android:textStyle="bold"/>
-    <ImageView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content" tools:srcCompat="@tools:sample/avatars"
-            android:id="@+id/articleImageView" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
-    <TextView
-            android:text="@string/library_fastadapter_author"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/authorTextView"
-            app:layout_constraintTop_toBottomOf="@+id/titleTextView" android:layout_marginTop="10dp"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="15dp"/>
-    <TextView
-            android:text="Date"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/dateTextView"
-            app:layout_constraintTop_toBottomOf="@+id/titleTextView" android:layout_marginTop="10dp"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="15dp"/>
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/linearLayout">
+            <TextView
+                    android:text="@string/library_fastadapter_author"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/authorTextView"
+                    android:textColor="#333333"
+                    android:textSize="10sp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@+id/articleImageView" android:layout_marginStart="16dp"
+                    app:layout_constraintStart_toStartOf="parent"/>
+            <TextView
+                    android:text="Article"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/contentTextView"
+                    android:textColor="#333333"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@+id/titleTextView" android:layout_marginStart="16dp"
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+            <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" tools:srcCompat="@tools:sample/avatars"
+                    android:id="@+id/articleImageView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+            />
+            <TextView
+                    android:text="TitleArticle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/titleTextView"
+                    android:textSize="24sp"
+                    android:textColor="#333333"
+                    android:layout_marginStart="16dp"
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="16dp"
+                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@+id/authorTextView"/>
+            <TextView
+                    android:text="Date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dateTextView"
+                    android:textColor="#333333" android:textSize="10sp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@+id/articleImageView" android:layout_marginEnd="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+            />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -41,7 +41,7 @@ class NewsFeedActivity : AppCompatActivity() {
         }
 
         healthButton.setOnClickListener{
-            createContentHealth("us")
+            createContentHealth(query)
         }
     }
 

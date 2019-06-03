@@ -9,7 +9,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.mikepenz.fastadapter.FastAdapter
 import com.mikepenz.fastadapter.IItem
 import com.mikepenz.fastadapter.adapters.ItemAdapter
-import fr.romainkhanoyan.droidnewsapp.services.Article
 import fr.romainkhanoyan.droidnewsapp.services.NewsRepository
 import fr.romainkhanoyan.droidnewsapp.services.NewsWrapper
 import fr.romainkhanoyan.droidnewsapp.viewholder.NewsItem
@@ -81,7 +80,7 @@ class NewsFeedActivity : AppCompatActivity() {
             intent.putExtra("title", item.article.title)
             intent.putExtra("author", item.article.author)
             intent.putExtra("date", item.article.publishedAt)
-            intent.putExtra("content", item.article.content)
+            intent.putExtra("content", item.article.description)
             startActivityForResult(intent, 1)
             true
         }

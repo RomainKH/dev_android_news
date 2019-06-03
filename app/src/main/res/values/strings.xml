@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">News App</string>
-    <string name="display_empty_content">Aucun contenue</string>
+    <string name="display_empty_content">No content available</string>
+    <string name="display_empty_author">No author available</string>
+    <string name="display_empty_date">No date available</string>
+    <string name="display_empty_title">No title available</string>
 </resources>

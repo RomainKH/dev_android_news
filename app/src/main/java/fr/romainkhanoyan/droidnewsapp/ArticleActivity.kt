@@ -33,12 +33,12 @@ class ArticleActivity : AppCompatActivity() {
             if (date.isNotBlank()) {
                 dateTextView.text = date
             } else {
-                dateTextView.setText(R.string.display_empty_content)
+                dateTextView.setText(R.string.display_empty_date)
             }
             if (author.isNotBlank()) {
                 authorTextView.text = author
             } else {
-                authorTextView.setText(R.string.display_empty_content)
+                authorTextView.setText(R.string.display_empty_author)
             }
         } else {
             contentTextView.setText(R.string.display_empty_content)

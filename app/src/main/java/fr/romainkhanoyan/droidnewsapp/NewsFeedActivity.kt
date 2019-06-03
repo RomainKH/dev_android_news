@@ -38,6 +38,10 @@ class NewsFeedActivity : AppCompatActivity() {
             query = "fr"
             createContent(query)
         }
+
+        healthButton.setOnClickListener{
+            createContentHealth("us")
+        }
     }
 
     fun createContent(query: String)
@@ -81,6 +85,52 @@ class NewsFeedActivity : AppCompatActivity() {
             intent.putExtra("author", item.article.author)
             intent.putExtra("date", item.article.publishedAt)
             intent.putExtra("content", item.article.description)
+            startActivityForResult(intent, 1)
+            true
+        }
+    }
+
+    fun createContentHealth(query: String)
+    {
+        val itemAdapter = ItemAdapter<IItem<*, *>>()
+        val repository = NewsRepository()
+        val fastAdapter = FastAdapter.with<NewsItem, ItemAdapter<IItem<*, *>>>(itemAdapter)
+
+        itemAdapter.clear()
+
+        repository.api.getHeadlinesHealth(query)
+            .enqueue(object : Callback<NewsWrapper> {
+
+                override fun onFailure(call: Call<NewsWrapper>, t: Throwable) {
+                    t.printStackTrace()
+                    Toast.makeText(this@NewsFeedActivity, "ERROR", Toast.LENGTH_SHORT).show()
+                }
+
+                override fun onResponse(call: Call<NewsWrapper>, response: Response<NewsWrapper>) {
+                    val newsWrapper = response.body()
+
+                    if (newsWrapper != null) {
+
+                        for (_article in newsWrapper.articles) {
+                            val item = NewsItem(_article)
+
+                            itemAdapter.add(item)
+                        }
+                    }
+
+                }
+
+            })
+
+        recyclerView.adapter = fastAdapter
+
+        fastAdapter.withOnClickListener { view, adapter, item, position ->
+            val intent = Intent(this, ArticleActivity::class.java)
+            intent.putExtra("image", item.article.urlToImage)
+            intent.putExtra("title", item.article.title)
+            intent.putExtra("author", item.article.author)
+            intent.putExtra("date", item.article.publishedAt)
+            intent.putExtra("content", item.article.content)
             startActivityForResult(intent, 1)
             true
         }

@@ -171,7 +171,7 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("title", item.article.title)
             intent.putExtra("author", item.article.author)
             intent.putExtra("date", item.article.publishedAt)
-            intent.putExtra("content", item.article.content)
+            intent.putExtra("content", item.article.description)
             startActivityForResult(intent, 1)
             true
         }

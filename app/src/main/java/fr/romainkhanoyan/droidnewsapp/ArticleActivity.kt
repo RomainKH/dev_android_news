@@ -10,6 +10,8 @@ class ArticleActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_article)
+        supportActionBar!!.title = "Go Back"
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
 
         if(intent != null && intent.extras != null) {
             val myTitle = intent.extras.getString("title", "")

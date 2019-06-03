@@ -21,6 +21,7 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class NewsFeedActivity : AppCompatActivity() {
+    var feed = "hot"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,11 +36,6 @@ class NewsFeedActivity : AppCompatActivity() {
 
         createContent(query)
 
-        changingNewsButton.setOnClickListener{
-            query = "fr"
-            createContent(query)
-        }
-
         healthButton.setOnClickListener{
             createContentHealth(query)
         }
@@ -53,13 +49,21 @@ class NewsFeedActivity : AppCompatActivity() {
             }
 
             override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
-                createContent(values[p2])
+                if(feed == "hot")
+                {
+                    createContent(values[p2])
+                }
+                else if (feed == "health")
+                {
+                    createContentHealth(values[p2])
+                }
             }
         }
     }
 
     fun createContent(query: String)
     {
+        feed = "hot"
         val itemAdapter = ItemAdapter<IItem<*, *>>()
         val repository = NewsRepository()
         val fastAdapter = FastAdapter.with<NewsItem, ItemAdapter<IItem<*, *>>>(itemAdapter)
@@ -106,6 +110,7 @@ class NewsFeedActivity : AppCompatActivity() {
 
     fun createContentHealth(query: String)
     {
+        feed = "health"
         val itemAdapter = ItemAdapter<IItem<*, *>>()
         val repository = NewsRepository()
         val fastAdapter = FastAdapter.with<NewsItem, ItemAdapter<IItem<*, *>>>(itemAdapter)

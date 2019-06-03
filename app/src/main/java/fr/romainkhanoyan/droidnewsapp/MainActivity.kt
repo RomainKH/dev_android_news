@@ -20,17 +20,5 @@ class MainActivity : AppCompatActivity() {
 
             startActivity(intent)
         }
-
-        val options = arrayListOf("France", "lol","United Kingdom")
-        countrySelector.adapter = ArrayAdapter(this,android.R.layout.simple_list_item_1,options)
-        countrySelector.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
-            override fun onNothingSelected(p0: AdapterView<*>?) {
-                Toast.makeText(this@MainActivity, "not selected", Toast.LENGTH_LONG).show()
-            }
-
-            override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
-                Toast.makeText(this@MainActivity, options[p2], Toast.LENGTH_LONG).show()
-            }
-        }
     }
 }

@@ -2,6 +2,9 @@ package fr.romainkhanoyan.droidnewsapp
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -30,8 +33,6 @@ class NewsFeedActivity : AppCompatActivity() {
             false
         )
 
-        val itemAdapter = ItemAdapter<IItem<*, *>>()
-
         createContent(query)
 
         changingNewsButton.setOnClickListener{
@@ -41,6 +42,19 @@ class NewsFeedActivity : AppCompatActivity() {
 
         healthButton.setOnClickListener{
             createContentHealth(query)
+        }
+
+        val options = arrayListOf("Amerique", "France", "Germany","United Kingdom")
+        val values = arrayListOf("us","fr", "de", "gb")
+        countrySelector.adapter = ArrayAdapter(this,android.R.layout.simple_list_item_1,options)
+        countrySelector.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+            override fun onNothingSelected(p0: AdapterView<*>?) {
+                Toast.makeText(this@NewsFeedActivity, "not selected", Toast.LENGTH_LONG).show()
+            }
+
+            override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
+                createContent(values[p2])
+            }
         }
     }
 

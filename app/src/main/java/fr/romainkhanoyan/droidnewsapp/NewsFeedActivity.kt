@@ -1,5 +1,6 @@
 package fr.romainkhanoyan.droidnewsapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -73,5 +74,16 @@ class NewsFeedActivity : AppCompatActivity() {
             })
 
         recyclerView.adapter = fastAdapter
+
+        fastAdapter.withOnClickListener { view, adapter, item, position ->
+            val intent = Intent(this, ArticleActivity::class.java)
+            intent.putExtra("image", item.article.urlToImage)
+            intent.putExtra("title", item.article.title)
+            intent.putExtra("author", item.article.author)
+            intent.putExtra("date", item.article.publishedAt)
+            intent.putExtra("content", item.article.content)
+            startActivityForResult(intent, 1)
+            true
+        }
     }
 }

@@ -9,8 +9,8 @@ interface NewsApi {
     @GET("top-headlines?pageSize=100&apiKey=6e2f93df9e8c4b4b8fd9a4041fb33f67")
     fun getHeadlines(@Query("country") country: String): Call<NewsWrapper>
 
-    @GET("top-headlines?category=health&apiKey=6e2f93df9e8c4b4b8fd9a4041fb33f67")
-    fun getHeadlinesHealth(@Query("country") country: String): Call<NewsWrapper>
+    @GET("top-headlines?apiKey=6e2f93df9e8c4b4b8fd9a4041fb33f67")
+    fun getHeadlinesHealth(@Query("country") country: String, @Query("category") category: String): Call<NewsWrapper>
 
 }
 

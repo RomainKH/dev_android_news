@@ -13,6 +13,36 @@
             android:layout_height="wrap_content"
             android:id="@+id/contentTextView" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="15dp"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="15dp" android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="15dp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintTop_toBottomOf="@+id/dateTextView" android:layout_marginTop="10dp"/>
+    <TextView
+            android:text="TitleArticle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/titleTextView" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="15dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="15dp"
+            app:layout_constraintHorizontal_bias="0.498" android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/articleImageView" android:textSize="18sp"
+            android:textStyle="bold"/>
+    <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" tools:srcCompat="@tools:sample/avatars"
+            android:id="@+id/articleImageView" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+            android:text="@string/library_fastadapter_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/authorTextView"
+            app:layout_constraintTop_toBottomOf="@+id/titleTextView" android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="15dp"/>
+    <TextView
+            android:text="Date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dateTextView"
+            app:layout_constraintTop_toBottomOf="@+id/titleTextView" android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="15dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

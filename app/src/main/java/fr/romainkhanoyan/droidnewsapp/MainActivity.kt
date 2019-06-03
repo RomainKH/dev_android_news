@@ -32,5 +32,8 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this@MainActivity, options[p2], Toast.LENGTH_LONG).show()
             }
         }
+
+
+        
     }
 }

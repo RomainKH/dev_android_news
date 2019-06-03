@@ -13,8 +13,7 @@
             android:theme="@style/AppTheme">
         <activity android:name=".HealthActivity">
         </activity>
-        <activity android:name=".ArticleActivity">
-        </activity>
+        <activity android:name=".ArticleActivity" android:parentActivityName=".MainActivity"></activity>
         <activity android:name=".NewsFeedActivity">
         </activity>
         <activity android:name=".MainActivity">

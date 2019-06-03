@@ -61,6 +61,16 @@ class MainActivity : AppCompatActivity() {
             createContentCategory(country, feed)
         }
 
+        entertainmentButton.setOnClickListener{
+            feed = "entertainment"
+            createContentCategory(country, feed)
+        }
+
+        technologyButton.setOnClickListener{
+            feed = "technology"
+            createContentCategory(country, feed)
+        }
+
         val options = arrayListOf("France", "Amerique",  "Germany","United Kingdom")
         val values = arrayListOf("fr", "us", "de", "gb")
         countrySelector.adapter = ArrayAdapter(this,android.R.layout.simple_list_item_1,options)

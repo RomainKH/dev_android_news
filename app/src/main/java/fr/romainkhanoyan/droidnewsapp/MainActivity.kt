@@ -16,6 +16,7 @@ import com.mikepenz.fastadapter.adapters.ItemAdapter
 import fr.romainkhanoyan.droidnewsapp.services.NewsRepository
 import fr.romainkhanoyan.droidnewsapp.services.NewsWrapper
 import fr.romainkhanoyan.droidnewsapp.viewholder.NewsItem
+import fr.romainkhanoyan.droidnewsapp.viewholder.formateDate
 import kotlinx.android.synthetic.main.activity_main.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -134,7 +135,7 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("image", item.article.urlToImage)
             intent.putExtra("title", item.article.title)
             intent.putExtra("author", item.article.author)
-            intent.putExtra("date", item.article.publishedAt)
+            intent.putExtra("date", formateDate(item.article.publishedAt))
             intent.putExtra("content", item.article.description)
             startActivityForResult(intent, 1)
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
@@ -182,7 +183,7 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("image", item.article.urlToImage)
             intent.putExtra("title", item.article.title)
             intent.putExtra("author", item.article.author)
-            intent.putExtra("date", item.article.publishedAt)
+            intent.putExtra("date", formateDate(item.article.publishedAt))
             intent.putExtra("content", item.article.description)
             startActivityForResult(intent, 1)
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)

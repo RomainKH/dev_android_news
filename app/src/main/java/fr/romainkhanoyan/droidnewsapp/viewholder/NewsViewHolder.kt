@@ -26,7 +26,7 @@ class NewsViewHolder(itemView: View) : FastAdapter.ViewHolder<NewsItem>(itemView
     override fun bindView(item: NewsItem, payloads: MutableList<Any>) {
         titleTextView.text = item.article.title
         authorTextView.text = item.article.author
-        dateTextView.text = item.article.publishedAt
+        dateTextView.text = formateDate(item.article.publishedAt)
 
         Glide.with(newsImageView)
             .load(item.article.urlToImage)
@@ -49,4 +49,12 @@ class NewsItem(val article: Article): AbstractItem<NewsItem, NewsViewHolder>() {
 
     override fun getLayoutRes() = R.layout.row_article
 
+}
+
+fun formateDate(date: String): CharSequence? {
+    var reformateDate = date.replace("-","/")
+    var addSpace = reformateDate.replace("T",", ")
+    var finalDate = addSpace.replace("Z"," ")
+
+    return finalDate
 }

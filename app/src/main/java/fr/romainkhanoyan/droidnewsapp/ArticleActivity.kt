@@ -2,6 +2,7 @@ package fr.romainkhanoyan.droidnewsapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.activity_article.*
 
@@ -10,8 +11,19 @@ class ArticleActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_article)
+
         supportActionBar!!.title = "Go Back"
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+
+        //fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+          //  if (item.getItemId() === R.id.home) {
+            //    finish()
+            //    overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
+            //    return true
+            //}
+            //return false
+        //}
 
         if(intent != null && intent.extras != null) {
             val myTitle = intent.extras.getString("title", "")

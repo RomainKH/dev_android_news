@@ -20,19 +20,21 @@
                     android:id="@+id/authorTextView"
                     android:textColor="#333333"
                     android:textSize="12sp"
-                    android:layout_marginTop="8dp"
-                    app:layout_constraintTop_toBottomOf="@+id/articleImageView"
-                    android:layout_marginEnd="16dp" app:layout_constraintEnd_toEndOf="parent"/>
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintTop_toBottomOf="@+id/titleTextView" android:layout_marginStart="16dp"
+                    app:layout_constraintStart_toStartOf="parent"/>
             <TextView
                     android:text="Article"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/contentTextView"
                     android:textColor="#333333"
-                    android:layout_marginTop="8dp"
-                    app:layout_constraintTop_toBottomOf="@+id/titleTextView" android:layout_marginStart="16dp"
+                    android:layout_marginStart="16dp"
                     app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="16dp"
-                    app:layout_constraintEnd_toEndOf="parent" android:textSize="18sp"/>
+                    app:layout_constraintEnd_toEndOf="parent" android:textSize="18sp"
+                    app:layout_constraintHorizontal_bias="0.0" android:layout_marginTop="16dp"
+                    app:layout_constraintTop_toBottomOf="@+id/dateTextView" android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
             <ImageView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content" tools:srcCompat="@tools:sample/avatars"
@@ -50,8 +52,9 @@
                     android:textColor="#333333"
                     android:layout_marginStart="16dp"
                     app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="16dp"
-                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="8dp"
-                    app:layout_constraintTop_toBottomOf="@+id/authorTextView" android:textStyle="bold"/>
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:textStyle="bold" android:layout_marginTop="16dp"
+                    app:layout_constraintTop_toBottomOf="@+id/articleImageView"/>
             <TextView
                     android:text="Date"
                     android:layout_width="wrap_content"
@@ -59,8 +62,8 @@
                     android:id="@+id/dateTextView"
                     android:textColor="#3C3C3C" android:textSize="12sp"
                     android:layout_marginTop="8dp"
-                    app:layout_constraintTop_toBottomOf="@+id/articleImageView"
-                    android:layout_marginStart="16dp" app:layout_constraintStart_toStartOf="parent"/>
+                    app:layout_constraintTop_toBottomOf="@+id/authorTextView" android:layout_marginStart="16dp"
+                    app:layout_constraintStart_toStartOf="parent"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

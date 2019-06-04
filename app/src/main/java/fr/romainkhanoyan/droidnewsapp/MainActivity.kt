@@ -7,6 +7,7 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.mikepenz.fastadapter.FastAdapter
@@ -136,6 +137,7 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("date", item.article.publishedAt)
             intent.putExtra("content", item.article.description)
             startActivityForResult(intent, 1)
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
             true
         }
     }
@@ -183,6 +185,7 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("date", item.article.publishedAt)
             intent.putExtra("content", item.article.description)
             startActivityForResult(intent, 1)
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
             true
         }
     }

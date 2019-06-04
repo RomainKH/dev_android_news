@@ -12,7 +12,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:background="#DADADA"
-            android:id="@+id/linearLayout2" app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/spinnerLinearLayout" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent">
 
         <Spinner
@@ -42,7 +42,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" android:id="@+id/recyclerView"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout2" android:layout_marginTop="8dp">
+            app:layout_constraintTop_toBottomOf="@+id/spinnerLinearLayout" android:layout_marginTop="8dp">
     </androidx.recyclerview.widget.RecyclerView>
     <HorizontalScrollView
             android:layout_width="match_parent"
@@ -57,43 +57,50 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" android:id="@+id/homeButton"
                     android:padding="5dp"
-                    android:layout_weight="1" android:background="#FFFFFF"/>
+                    android:layout_weight="1" android:background="#FFFFFF"
+                    android:foreground="?selectableItemBackground"/>
             <Button
                     android:text="Health"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" android:id="@+id/healthButton"
                     android:padding="5dp"
-                    android:background="#FFFFFF"/>
+                    android:background="#FFFFFF"
+                    android:foreground="?selectableItemBackground"/>
             <Button
                     android:text="Business"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" android:id="@+id/businessButton"
                     android:padding="5dp"
-                    android:background="#FFFFFF"/>
+                    android:background="#FFFFFF"
+                    android:foreground="?selectableItemBackground"/>
             <Button
                     android:text="Science"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" android:id="@+id/scienceButton"
                     android:padding="5dp"
-                    android:background="#FFFFFF"/>
+                    android:background="#FFFFFF"
+                    android:foreground="?selectableItemBackground"/>
             <Button
                     android:text="Sport"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" android:id="@+id/sportButton"
                     android:padding="5dp"
-                    android:background="#FFFFFF"/>
+                    android:background="#FFFFFF"
+                    android:foreground="?selectableItemBackground"/>
             <Button
                     android:text="Entertainment"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" android:id="@+id/entertainmentButton"
                     android:padding="5dp"
-                    android:layout_weight="1" android:background="#FFFFFF"/>
+                    android:layout_weight="1" android:background="#FFFFFF"
+                    android:foreground="?selectableItemBackground"/>
             <Button
                     android:text="Technology"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" android:id="@+id/technologyButton"
                     android:padding="5dp"
-                    android:layout_weight="1" android:background="#FFFFFF"/>
+                    android:layout_weight="1" android:background="#FFFFFF"
+                    android:foreground="?selectableItemBackground"/>
         </LinearLayout>
     </HorizontalScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

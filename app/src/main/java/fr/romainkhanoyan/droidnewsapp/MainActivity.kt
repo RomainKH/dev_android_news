@@ -141,6 +141,7 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("author", item.article.author)
             intent.putExtra("date", formateDate(item.article.publishedAt))
             intent.putExtra("content", item.article.description)
+            intent.putExtra("url", item.article.url)
             startActivityForResult(intent, 1)
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
             true

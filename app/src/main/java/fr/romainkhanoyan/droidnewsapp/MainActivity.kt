@@ -73,9 +73,10 @@ class MainActivity : AppCompatActivity() {
             createContentCategory(country, feed)
         }
 
-        val options = arrayListOf("France", "Amerique",  "Germany","United Kingdom")
-        val values = arrayListOf("fr", "us", "de", "gb")
+        val options = arrayListOf("Emirats Arabes Unis", "Argentine", "Autriche", "Australie", "Belgique", "Bulgarie", "Brésil", "Canada", "Suisse", "Chine", "Colombie", "Cuba", "République Tchèque", "Allemagne", "Egypte", "France", "Royaume-Uni", "Grèce", "Hong Kong", "Hongrie", "Indonésie", "Irlande", "Israël", "Inde", "Italie", "Japon", "Corée du Sud", "Lituanie", "Lettonie", "Maroc", "Mexique", "Malaisie", "Nigeria", "Pays-Bas", "Norvège", "Nouvelle-Zélande", "Philippine", "Polande", "Portugal", "Roumanie", "Serbie", "Russie", "Arabie Saoudite", "Suède", "Singapour", "Slovénie", "Slovaquie", "Thaïlande", "Turquie", "Taiwan", "Ukraine", "Etats-Unis", "Venezuela", "Afrique du Sud")
+        val values = arrayListOf("ae", "ar", "at", "au","be", "bg", "br", "ca", "ch", "cn", "co", "cu", "cz", "de", "eg", "fr", "gb", "gr", "hk", "hu", "id", "ie", "il", "in", "it", "jp", "kr", "lt", "lv", "ma", "mx", "my", "ng", "nl", "no", "nz", "ph", "pl", "pt", "ro", "rs", "ru", "sa", "se", "sg", "si", "sk", "th", "tr", "tw", "ua", "us", "ve", "za")
         countrySelector.adapter = ArrayAdapter(this,android.R.layout.simple_list_item_1,options)
+        countrySelector.setSelection(15)
         countrySelector.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
             override fun onNothingSelected(p0: AdapterView<*>?) {
                 Toast.makeText(this@MainActivity, "not selected", Toast.LENGTH_LONG).show()

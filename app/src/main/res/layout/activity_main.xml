@@ -48,47 +48,52 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" android:id="@+id/bottomScrollView"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent">
+            app:layout_constraintEnd_toEndOf="parent" android:background="#DADADA">
         <LinearLayout android:layout_width="wrap_content" android:layout_height="match_parent"
                       android:orientation="horizontal"
-        >
+                      android:background="#FFFFFF">
             <Button
                     android:text="Home"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/homeButton"
-                    android:layout_marginBottom="8dp"
-                    android:layout_weight="1"/>
+                    android:layout_height="match_parent" android:id="@+id/homeButton"
+                    android:padding="5dp"
+                    android:layout_weight="1" android:background="#FFFFFF"/>
             <Button
                     android:text="Health"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/healthButton"
-                    android:layout_marginBottom="8dp"
-            />
+                    android:layout_height="match_parent" android:id="@+id/healthButton"
+                    android:padding="5dp"
+                    android:background="#FFFFFF"/>
             <Button
                     android:text="Business"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/businessButton"
-            />
+                    android:layout_height="match_parent" android:id="@+id/businessButton"
+                    android:padding="5dp"
+                    android:background="#FFFFFF"/>
             <Button
                     android:text="Science"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/scienceButton"
-            />
+                    android:layout_height="match_parent" android:id="@+id/scienceButton"
+                    android:padding="5dp"
+                    android:background="#FFFFFF"/>
             <Button
                     android:text="Sport"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/sportButton"
-            />
+                    android:layout_height="match_parent" android:id="@+id/sportButton"
+                    android:padding="5dp"
+                    android:background="#FFFFFF"/>
             <Button
                     android:text="Entertainment"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/entertainmentButton"
-                    android:layout_weight="1"/>
+                    android:layout_height="match_parent" android:id="@+id/entertainmentButton"
+                    android:padding="5dp"
+                    android:layout_weight="1" android:background="#FFFFFF"/>
             <Button
                     android:text="Technology"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/technologyButton"
-                    android:layout_weight="1"/>
+                    android:layout_height="match_parent" android:id="@+id/technologyButton"
+                    android:padding="5dp"
+                    android:layout_weight="1" android:background="#FFFFFF"/>
         </LinearLayout>
     </HorizontalScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

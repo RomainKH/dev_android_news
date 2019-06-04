@@ -54,11 +54,14 @@ class ArticleActivity : AppCompatActivity() {
                 val pattern = Pattern.compile("Lire la suite")
                 Linkify.addLinks(linkTextView, pattern, url)
             } else {
-                linkTextView.setText(R.string.display_empty_content)
+                linkTextView.setText(R.string.display_empty_link)
             }
         } else {
             contentTextView.setText(R.string.display_empty_content)
             titleTextView.setText(R.string.display_empty_content)
+            dateTextView.setText(R.string.display_empty_date)
+            authorTextView.setText(R.string.display_empty_author)
+            linkTextView.setText(R.string.display_empty_link)
         }
     }
 

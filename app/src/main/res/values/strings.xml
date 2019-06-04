@@ -4,4 +4,5 @@
     <string name="display_empty_author">No author available</string>
     <string name="display_empty_date">No date available</string>
     <string name="display_empty_title">No title available</string>
+    <string name="display_empty_link">No source link</string>
 </resources>

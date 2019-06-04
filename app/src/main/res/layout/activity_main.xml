@@ -17,14 +17,15 @@
 
         <Spinner
                 android:layout_width="0dp"
-                android:layout_height="35dp"
+                android:layout_height="44dp"
                 android:id="@+id/countrySelector"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:visibility="visible" android:background="#DADADA"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintHorizontal_bias="0.0" app:layout_constraintTop_toTopOf="parent"
                 android:popupBackground="#DADADA"
-                app:layout_constraintEnd_toStartOf="@+id/imageView"/>
+                app:layout_constraintEnd_toStartOf="@+id/imageView"
+                android:dropDownHeight="100dp"/>
 
         <ImageView
                 android:layout_width="wrap_content"

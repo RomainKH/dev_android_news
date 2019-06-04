@@ -19,6 +19,8 @@ class ArticleActivity : AppCompatActivity() {
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
 
 
+
+
         if(intent != null && intent.extras != null) {
             val myTitle = intent.extras.getString("title", "")
             val myMessage = intent.extras.getString("content", "")
@@ -69,6 +71,10 @@ class ArticleActivity : AppCompatActivity() {
         onBackPressed()
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
         return true
+    }
+    override fun onBackPressed() {
+        super.onBackPressed()
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
     }
 }
 

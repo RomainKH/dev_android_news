@@ -73,8 +73,9 @@
                     android:id="@+id/linkTextView"
                     app:layout_constraintTop_toBottomOf="@+id/contentTextView" app:layout_constraintEnd_toEndOf="parent"
                     android:layout_marginEnd="16dp"
-                    android:layout_marginTop="16dp" app:layout_constraintBottom_toBottomOf="parent"
-                    android:layout_marginBottom="16dp"/>
+                    android:layout_marginTop="32dp" app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginBottom="16dp" app:layout_constraintVertical_bias="1.0"
+                    android:textSize="16sp"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

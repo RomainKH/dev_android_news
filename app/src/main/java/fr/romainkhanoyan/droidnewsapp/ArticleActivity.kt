@@ -1,5 +1,6 @@
 package fr.romainkhanoyan.droidnewsapp
 
+import android.app.PendingIntent.getActivity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
@@ -15,15 +16,6 @@ class ArticleActivity : AppCompatActivity() {
         supportActionBar!!.title = "Go Back"
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
 
-        //fun onOptionsItemSelected(item: MenuItem): Boolean {
-
-          //  if (item.getItemId() === R.id.home) {
-            //    finish()
-            //    overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
-            //    return true
-            //}
-            //return false
-        //}
 
         if(intent != null && intent.extras != null) {
             val myTitle = intent.extras.getString("title", "")
@@ -59,4 +51,11 @@ class ArticleActivity : AppCompatActivity() {
             titleTextView.setText(R.string.display_empty_content)
         }
     }
+
+    override fun onSupportNavigateUp():Boolean {
+        onBackPressed()
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
+        return true
+    }
 }
+

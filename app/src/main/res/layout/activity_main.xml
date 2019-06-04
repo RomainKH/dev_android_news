@@ -53,21 +53,21 @@
                       android:orientation="horizontal"
                       android:background="#FFFFFF">
             <Button
-                    android:text="Home"
+                    android:text="Accueil"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" android:id="@+id/homeButton"
                     android:padding="5dp"
                     android:layout_weight="1" android:background="#FFFFFF"
                     android:foreground="?selectableItemBackground"/>
             <Button
-                    android:text="Health"
+                    android:text="Santé"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" android:id="@+id/healthButton"
                     android:padding="5dp"
                     android:background="#FFFFFF"
                     android:foreground="?selectableItemBackground"/>
             <Button
-                    android:text="Business"
+                    android:text="Economie"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" android:id="@+id/businessButton"
                     android:padding="5dp"
@@ -88,14 +88,14 @@
                     android:background="#FFFFFF"
                     android:foreground="?selectableItemBackground"/>
             <Button
-                    android:text="Entertainment"
+                    android:text="Divertissement"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" android:id="@+id/entertainmentButton"
                     android:padding="5dp"
                     android:layout_weight="1" android:background="#FFFFFF"
                     android:foreground="?selectableItemBackground"/>
             <Button
-                    android:text="Technology"
+                    android:text="Technologie"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" android:id="@+id/technologyButton"
                     android:padding="5dp"

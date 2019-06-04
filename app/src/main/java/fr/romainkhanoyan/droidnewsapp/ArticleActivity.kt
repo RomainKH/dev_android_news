@@ -13,7 +13,7 @@ class ArticleActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_article)
 
-        supportActionBar!!.title = "Go Back"
+        supportActionBar!!.title = "Retour"
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
 
 

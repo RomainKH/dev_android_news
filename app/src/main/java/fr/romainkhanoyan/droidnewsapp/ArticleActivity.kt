@@ -1,10 +1,8 @@
 package fr.romainkhanoyan.droidnewsapp
 
-import android.app.PendingIntent.getActivity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.util.Linkify
-import android.view.MenuItem
 import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.activity_article.*
 import java.util.regex.Pattern
